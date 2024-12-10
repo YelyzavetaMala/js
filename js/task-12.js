@@ -1,37 +1,93 @@
-function calcAverageCalories(days) {
-  if (days.length === 0) {
-    return 0;
-  }
-  let totalCalories = 0;
-
-  for (const day of days) {
-    totalCalories += day.calories;
-  }
-
-  return totalCalories / days.length;
+// Якщо змінна більше нуля - виведіть true, менше - false
+//Перевірте це на варіантах  1, 0, -3.
+/*
+const value = 1;
+if (value >= 0) {
+  console.log(true);
+} else {
+  console.log(false);
 }
-console.log(
-  calcAverageCalories([
-    { day: "monday", calories: 3010 },
-    { day: "tuesday", calories: 3200 },
-    { day: "wednesday", calories: 3120 },
-    { day: "thursday", calories: 2900 },
-    { day: "friday", calories: 3450 },
-    { day: "saturday", calories: 3280 },
-    { day: "sunday", calories: 3300 },
-  ])
-); // 3180
 
-console.log(
-  calcAverageCalories([
-    { day: "monday", calories: 2040 },
-    { day: "tuesday", calories: 2270 },
-    { day: "wednesday", calories: 2420 },
-    { day: "thursday", calories: 1900 },
-    { day: "friday", calories: 2370 },
-    { day: "saturday", calories: 2280 },
-    { day: "sunday", calories: 2610 },
-  ])
-); // 2270
+// Якщо змінна ="test" - виведіть true,
+//Перевірте це на варіантах  'test', "qwerty", true
 
-console.log(calcAverageCalories([])); // 0
+//const result = "qwerty";
+//console.log(result === "test" ? true : false);
+
+// Якщо змінна більше 10 -  відніміть 5,
+//менше - додайте 5, результат виведіть в консоль
+//Перевірте це на варіантах  1, 10, 13.
+let value = 5;
+if (value >= 10) {
+  console.log(value - 5);
+} else if (value <= 5) {
+  console.log(value + 5);
+} else {
+  console.log("okay");
+}
+
+//Зробіть сервіс який отримує число від 1 до 12
+// виведіть місяць який дорівнює числу
+
+const value = prompt("введіть число від 1 до 12");
+let month;
+switch (value) {
+  case "1":
+    month = "January";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "2":
+    month = "February";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "3":
+    month = "March";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "4":
+    month = "April";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "5":
+    month = "May";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "6":
+    month = "June";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "7":
+    month = "July";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "8":
+    month = "August";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "9":
+    month = "September";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "10":
+    month = "October";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "11":
+    month = "November";
+    alert(`${value} це місяць ${month}`);
+    break;
+  case "12":
+    month = "December";
+    alert(`${value} це місяць ${month}`);
+    break;
+
+  default:
+    alert("Error! введіть число від 1 до 12");
+}
+
+//Зробіть сервіс який отримує тризначне число
+//Поверніть користувачу сумму цих чисел
+let number = prompt("Введіть тризначне число:");
+let sum = parseInt(number[0]) + parseInt(number[1]) + parseInt(number[2]);
+alert(`Сума цифр: ${sum}`);
+*/

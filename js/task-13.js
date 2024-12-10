@@ -1,121 +1,68 @@
-const header = document.querySelector("#HEADER_JS");
-const overlay = document.querySelector("#overlay");
+/*
+//  -- 1 --
+// У вас є масив об’єктів fruts, і в кожному з них є name
+// Напишіть код, який перетворює їх в масив імен.
 
-/* ======= menu button ======= */
-/* ======= menu закрити.відкрити ======= */
-const menuButton = document.querySelector("#HEADER_MENU_JS");
-function handleMenuButton() {
-  document.body.classList.toggle("is-hidden");
-  header.classList.toggle("ih-header-menu-open");
+const fruts = [
+  { id: 0, name: "Apple" },
+  { id: 1, name: "Tomat" },
+  { id: 2, name: "Cherry" },
+  { id: 3, name: "Orange" },
+];
+
+const arrName = fruts.map((frut) => frut.name);
+
+console.log(arrName);
+
+//  -- 2 --
+//Виведіть парні числа від 2 до 10, використовуючи цикл for.
+
+for (let i = 1; i < 10; i++) {
+  if (i % 2 !== 0) continue;
+  console.log(i);
 }
 
-if (menuButton) {
-  menuButton.removeEventListener("click", handleMenuButton);
-  menuButton.addEventListener("click", handleMenuButton);
-}
-/* ======= END menu закрити.відкрити ======= */
-
-const menuNav = document.querySelector("#MENU_NAV_JS");
-
-function handleMenuNavigation(event) {
-  document.body.classList.remove("is-hidden");
-  if (event.target.tagName === "A") {
-    header.classList.remove("ih-header-menu-open");
-    overlay.classList.remove("is-visible");
-  }
+//  -- 3 --
+//Замініть цикл "for" на "while"
+// for (let i = 0; i < 5; i++) {
+//     console.lpg( `цифра ${i}!` );
+//   }
+let i = 0;
+while (i < 5) {
+  console.log(`цифра ${i}!`);
+  i++;
 }
 
-if (menuNav) {
-  menuNav.removeEventListener("click", handleMenuNavigation);
-  menuNav.addEventListener("click", handleMenuNavigation);
-}
+//  -- 4 -- // цей код під питанням !!!
+//Напишіть цикл, який пропонує prompt ввести число більше за 100.
+//Якщо відвідувач введе менше число – попросити ввести ще раз, і так далі.
+//Цикл повинен запитувати число доти, доки відвідувач не введе число,
+// більше за 100, або не скасує ввід/введе порожній рядок.
+let number;
 
-/* ======= menu navigation  ======= */
+do {
+  number = prompt("Введіть число більше за 100:", "");
+} while (number && Number(number) <= 100); 
 
-const menuNavigation = document.querySelector("#MENU_NAV_JS");
+console.log(
+  number ? `Ви ввели число: ${number}` : "Ввід скасовано або нічого не введено."
+);
 
-const createNavigationMarkup = () => {
-  return ` <li class="ih-menu-item" data-section="benefits" data-lang="header.menu.benefits" type="button">
-             <img
-                loading="lazy"
-                src="./images/little-candy/Candy-purple-1x.png"
-                alt="photo desc"
-                width="24"
-                height="24"
-              />
-            Benefits
-          </li>
-          <li class="ih-menu-item" data-section="about-the-game" data-lang="header.menu.about-the-game" type="button">
-            <img
-                class="candy-img"
-                loading="lazy"
-                src="./images/little-candy/Candy-red-1x.png"
-                alt="photo desc"
-                width="24"
-                height="24"
-              />
-            About the Game
-          </li>
-          <li class="ih-menu-item" data-section="how-to-play"
-          data-lang="header.menu.how-to-play" type="button">
-           <img
-                loading="lazy"
-                src="./images/little-candy/Candy-purple-1x.png"
-                alt="photo desc"
-                width="24"
-                height="24"
-              />
-            How to Play
-          </li>
-          <li class="ih-menu-item" data-section="gallery" data-lang="header.menu.gallery" type="button">
-            <img
-                class="candy-img"
-                loading="lazy"
-                src="./images/little-candy/Candy-red-1x.png"
-                alt="photo desc"
-                width="24"
-                height="24"
-              /> Gallery
-          </li>
-          <li class="ih-menu-item" data-section="advantages" data-lang="header.menu.advantages" type="button">
-            <img
-          loading="lazy"
-          src="./images/little-candy/Candy-left-1x.png"
-          alt="photo desc"
-          width="24"
-          height="24"
-        />
-            Advantages
-          </li>`;
-};
 
-const renderNavigationMarkup = () => {
-  if (menuNavigation) {
-    menuNavigation.innerHTML = createNavigationMarkup();
-  }
-};
+// цей код під питанням !!!
 
-/* ======= smooth scroll  ======= */
-function handleScrollToSection(event) {
-  if (event.target.dataset.section) {
-    const sectionId = event.target.dataset.section;
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-        inline: "nearest",
-      });
-      header.classList.remove("ih-header-menu-open");
-    }
-  }
-}
 
-if (menuNavigation) {
-  menuNavigation.removeEventListener("click", handleScrollToSection);
-  menuNavigation.addEventListener("click", handleScrollToSection);
-}
+//  -- 5 --
+// Вирахуйте середній вік
 
-document.addEventListener("DOMContentLoaded", () => {
-  renderNavigationMarkup();
-});
+const girls = [
+  { age: 23, name: "Оля" },
+  { age: 29, name: "Аня" },
+  { age: 10, name: "Юля" },
+  { age: 20, name: "Катя" },
+];
+
+let summ = girls.reduce((sum, girl) => sum + girl.age, 0);
+let ageG = summ / girls.length;
+console.log(ageG);
+*/
