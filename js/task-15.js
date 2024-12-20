@@ -30,7 +30,7 @@ let user = document.querySelectorAll("div");
 user.forEach(function (element) {
   element.onclick = changeColor;
 });
-*/
+
 
 function hello() {
   console.log(this);
@@ -41,9 +41,10 @@ const user = {
   age: 30,
   hello: hello,
   sayHelloWindow: hello.bind(windo),
-  info: function () {
+  info: function (city) {
     console.log(`Name is ${this.name}`);
     console.log(`Age is ${this.age}`);
+    console.log(`City is ${city}`);
   },
 };
 user.sayHelloWindow();
@@ -58,5 +59,41 @@ const Nata = {
   age: 50,
 };
 
-user.info.bind(Ann)();
-user.info.bind(Nata)();
+user.info.bind(Ann)("Kyiv");
+const nataInfo = user.info.bind(Nata, "Odesa")();
+nataInfo();
+
+
+const userInfo = {
+  name: "name",
+  age: 98,
+  logInfo: function (job) {
+    console.group(`${name} info:`);
+    console.log(`Name is : ${this.name}`);
+    console.log(`Age is : ${this.age}`);
+    console.log(`Job is : ${job}`);
+    console.groupEnd();
+  },
+};
+
+const Vano = {
+  name: "Ivan",
+  age: 45,
+};
+userInfo.logInfo.call(Vano, "developer");
+
+
+const message = function (name, stars) {
+  console.log(`${name}, Welcome to ${this.hotel}, stars ${stars}`);
+};
+
+const Bukovel = { hotel: "Bukovel" };
+const Turist = { hotel: "Turist" };
+
+message.call(Bukovel, "Ivan", "5");
+message.call(Turist, "Ivan", "3");
+
+message.apply(Bukovel, ["Ivan", "5"]);
+
+message.bind(Bukovel, "Ivan", "5")();
+*/
