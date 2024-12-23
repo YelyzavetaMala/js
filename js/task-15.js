@@ -96,4 +96,57 @@ message.call(Turist, "Ivan", "3");
 message.apply(Bukovel, ["Ivan", "5"]);
 
 message.bind(Bukovel, "Ivan", "5")();
-*/
+
+
+const cart = {
+  showItems() {
+    console.log("В корзині: ", this.items);
+  },
+};
+const woman = {
+  items: ["Сукня, туфлі"],
+};
+const man = {
+  items: ["Костюм, сорочка"],
+};
+const child = {
+  items: ["Майка, шорти"],
+};
+
+
+document
+  .querySelector("#wom")
+  .addEventListener("click", cart.showItems.bind(woman));
+
+document
+  .querySelector("#man")
+  .addEventListener("click", cart.showItems.bind(man));
+
+
+document
+  .querySelector("#kid")
+  .addEventListener("click", cart.showItems.bind(child));
+
+  */
+
+const infoCar = {
+  name: "audi",
+  model: "rs7",
+  color: "black",
+  showInfo: function () {
+    console.log(
+      "Car: " + this.name + " model: " + this.model + " color: " + this.color
+    );
+  },
+};
+
+car2 = {
+  name: "opel",
+  model: "xxx",
+  color: "red",
+};
+
+infoCar.showInfo();
+infoCar.showInfo.bind(car2)();
+infoCar.showInfo.call(car2);
+infoCar.showInfo.apply(car2);
