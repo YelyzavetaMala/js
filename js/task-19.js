@@ -30,7 +30,7 @@ removeBtn.addEventListener("click", () => {
 });
 
 
-*/
+
 
 const clickBtn = document.querySelector("#click");
 const infoClick = (event) => {
@@ -38,3 +38,18 @@ const infoClick = (event) => {
 };
 
 clickBtn.addEventListener("click", infoClick);
+
+*/
+
+const form = document.querySelector(".form");
+const loginInput = form.querySelector('input[type="text"]');
+const passInput = form.querySelector('input[type="password"]');
+
+form.addEventListener("submit", handleSubmit);
+function handleSubmit(event) {
+  event.preventDefault();
+  const login = loginInput.value;
+  const password = passInput.value;
+  console.log(`Логін: ${login} Пароль: ${password}`);
+  form.reset();
+}
