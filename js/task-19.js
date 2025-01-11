@@ -39,7 +39,7 @@ const infoClick = (event) => {
 
 clickBtn.addEventListener("click", infoClick);
 
-*/
+
 
 const form = document.querySelector(".form");
 const loginInput = form.querySelector('input[type="text"]');
@@ -53,3 +53,66 @@ function handleSubmit(event) {
   console.log(`Логін: ${login} Пароль: ${password}`);
   form.reset();
 }
+
+
+
+const parent = document.querySelector("#parent");
+const child = document.querySelector("#child");
+const item = document.querySelector("#item");
+
+parent.addEventListener("click", () => console.log("Click Parent!"));
+child.addEventListener("click", () => console.log("Click Child!"));
+item.addEventListener("click", () => console.log("Click Item!"));
+
+const handleClick = (event) => {
+  console.log("event:", event.target);
+};
+parent.addEventListener("click", handleClick);
+
+const itemClick = () => {
+  console.log("itemClick stop");
+  event.stopPropagation();
+};
+
+const childClick = () => {
+  console.log("childClick stop");
+  event.stopPropagation();
+};
+
+const parentClick = () => {
+  console.log("parentClick stop");
+  event.stopPropagation();
+};
+
+parent.addEventListener("click", parentClick);
+child.addEventListener("click", childClick);
+item.addEventListener("click", itemClick);
+
+const nav = document.querySelector(".nav");
+nav.addEventListener("click", handleClick);
+function handleClick(event) {
+  const checkClass = nav.querySelector("li.active");
+  if (checkClass) {
+    event.target.classList.remove("active");
+  } else {
+    event.target.classList.add("active");
+  }
+}
+*/
+
+const ball = document.querySelector(".ball");
+
+ball.onmousedown = function (event) {
+  function move(pageX, pageY) {
+    ball.style.left = pageX - ball.offsetWidth / 2 + "px";
+    ball.style.top = pageY - ball.offsetWidth / 2 + "px";
+  }
+  move(event.pageX, event.pageY);
+  function onMouseMove(event) {
+    move(event.pageX, event.pageY);
+  }
+  document.addEventListener("mousemove", onMouseMove);
+  ball.onmouseup = function () {
+    document.removeEventListener("mousemove", onMouseMove);
+  };
+};

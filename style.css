@@ -39,15 +39,6 @@
   fill: rgba(0, 0, 0, 0.25);
 }
 
-@include media(desktop) {
-  .logo-header {
-    display: none;
-  }
-  .logo-text {
-    display: none;
-  }
-}
-
 ih-header {
   display: flex;
   display: flex;
@@ -206,4 +197,38 @@ ih-header {
 }
 .input {
   margin: 10px;
+}
+
+.parent,
+.child,
+.item {
+  margin: 30px;
+  padding: 10px;
+  outline: 1px solid peru;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.liItem {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid red;
+}
+.liItem.active {
+  background-color: red;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  z-index: 20;
+  position: absolute;
+  border-radius: 50%;
 }

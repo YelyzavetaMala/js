@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>js</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
     <script src="./js/task-1.js" defer></script>
     <script src="./js/task-2.js" defer></script>
     <script src="./js/task-3.js" defer></script>
@@ -129,9 +138,24 @@
         <button class="btnSub">реестрація</button>
       </form>
 
-      <div></div>
-      <div></div>
-      <div></div>
+      <div class="parent" id="parent">
+        parent
+        <div class="child" id="child">
+          child
+          <div class="item" id="item">item</div>
+        </div>
+      </div>
+
+      <ul class="nav">
+        <li class="liItem">1</li>
+        <li class="liItem">2</li>
+        <li class="liItem">3</li>
+        <li class="liItem">4</li>
+        <li class="liItem">5</li>
+        <li class="liItem">6</li>
+      </ul>
+
+      <div class="ball"></div>
     </main>
     <footer></footer>
   </body>
