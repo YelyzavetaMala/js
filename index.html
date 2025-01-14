@@ -119,7 +119,7 @@
         <li>2</li>
         <li>3</li>
       </ul>
-      -->
+     
       <div class="buttonBlock">
         <button class="buttonItem" id="btn1">1</button>
         <button class="buttonItem" id="btn2">2</button>
@@ -156,17 +156,53 @@
       </ul>
 
       <div class="ball"></div>
+      
+      <form class="form">
+        <p>Ім'я</p>
+        <input id="name" class="inputName" />
 
-      <form class="form"><p>Name</p>
-      <input  id="name" class="inputName"></form>
-      <p>LastName</p>
-      <input  id="name" class="inputLastName"></form>
-      <p>ствть</p>
-      <input type="radio" name="radio" value="female" onchange="chek()">female</br>
-      <input type="radio" name="radio" value="male" onchange="chek()">male</br>
-      <p>18 age?</p>
-      <input type="checkbox" id="age">
-      <button>Надіслати</button>
+        <p>Прізвище</p>
+        <input id="lastName" class="inputLastName" />
+
+        <p>Стать</p>
+        <input
+          type="radio"
+          name="radio"
+          value="female"
+          id="female"
+          onchange="chek()"
+        />
+        Жіноча<br />
+        <input
+          type="radio"
+          name="radio"
+          value="male"
+          id="male"
+          onchange="chek()"
+        />
+        Чоловіча<br />
+
+        <p>18 років?</p>
+        <input type="checkbox" id="age" /> Так<br />
+
+        <button type="submit">Надіслати</button>
+      </form>
+      
+      <form id="form">
+        <label>Name</label>
+        <input id="name" name="name" type="text" />
+        <label>Last Name</label>
+        <input id="lastname" name="lastname" type="text" />
+        <label>Age</label>
+        <input id="age" name="age" type="number" />
+        <label>Country</label>
+        <select name="country" id="country">
+          <option value="1">Ukraine</option>
+          <option value="2">Poland</option>
+          <option value="3">USA</option>
+        </select>
+      </form>
+       -->
     </main>
     <footer></footer>
   </body>

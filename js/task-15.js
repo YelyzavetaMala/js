@@ -127,7 +127,7 @@ document
   .querySelector("#kid")
   .addEventListener("click", cart.showItems.bind(child));
 
-  */
+  
 
 const infoCar = {
   name: "audi",
@@ -150,3 +150,4 @@ infoCar.showInfo();
 infoCar.showInfo.bind(car2)();
 infoCar.showInfo.call(car2);
 infoCar.showInfo.apply(car2);
+*/

@@ -98,7 +98,7 @@ function handleClick(event) {
     event.target.classList.add("active");
   }
 }
-*/
+
 
 const ball = document.querySelector(".ball");
 
@@ -116,3 +116,4 @@ ball.onmousedown = function (event) {
     document.removeEventListener("mousemove", onMouseMove);
   };
 };
+*/
