@@ -1,28 +1,23 @@
-let name = "Ivan";
-let city = name;
+let num = -3;
 
-console.log(city);
+if (num > 0) {
+  console.log(false);
+} else {
+  console.log(true);
+}
 
-let a = 0.1;
-let b = 0.2;
-let c = a + b;
+let world = true;
 
-console.log(c);
+if (world === "test") {
+  console.log(true);
+} else {
+  console.log(false);
+}
 
-console.log(Math.max(20, 10, 50, 40));
+let sum = 10;
 
-const message = "Welcome to Bahamas!";
-
-console.log(message.length);
-
-console.log(message.toUpperCase());
-
-const user = {};
-user.name = "Ivan";
-user.age = 25;
-user.city = "Lviv";
-
-console.log(user);
-delete user.city;
-
-console.log(user);
+if (sum >= 10) {
+  console.log(sum - 5);
+} else {
+  console.log(sum + 5);
+}
