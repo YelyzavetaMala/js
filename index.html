@@ -204,6 +204,25 @@
         </select>
       </form>
        -->
+
+      <h2>Натисни на кнопку:</h2>
+
+      <button onclick="showHTML()">HTML</button>
+      <button onclick="showCSS()">CSS</button>
+
+      <p id="definition"></p>
+
+      <script>
+        function showHTML() {
+          document.getElementById("definition").innerText =
+            "HTML — мова розмітки, яка використовується для створення структури веб-сторінки.";
+        }
+
+        function showCSS() {
+          document.getElementById("definition").innerText =
+            "CSS — мова стилів, яка використовується для оформлення вигляду веб-сторінки.";
+        }
+      </script>
     </main>
     <footer></footer>
   </body>
