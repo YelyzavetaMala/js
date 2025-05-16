@@ -223,6 +223,16 @@
             "CSS — мова стилів, яка використовується для оформлення вигляду веб-сторінки.";
         }
       </script>
+
+      <button onclick="hideText()">Сховати текст</button>
+
+      <div id="text">Цей текст зникне після натискання кнопки</div>
+
+      <script>
+        function hideText() {
+          document.getElementById("text").style.display = "none";
+        }
+      </script>
     </main>
     <footer></footer>
   </body>
