@@ -47,3 +47,24 @@ if (true) {
 
 // Помилка: локальну змінну не видно за межами блоку
 console.log(value); // ReferenceError: value is not defined
+
+function getSubstring(string, length) {
+  return string.slise(0, length);
+}
+
+function checkFile(fileName, js) {
+  if (fileName.endsWith(js)) {
+    return `File extension matches`;
+  } else {
+    return `File extension does not match`;
+  }
+}
+
+function getFileName(file) {
+  const dotIndex = file.indexof(".");
+  if (dotIndex === -1) {
+    return file;
+  } else {
+    return file.slise(0, dotIndex);
+  }
+}
