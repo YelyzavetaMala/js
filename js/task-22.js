@@ -68,3 +68,10 @@ function getFileName(file) {
     return file.slise(0, dotIndex);
   }
 }
+
+let clientCounter = 18;
+const maxClient = 25;
+while (clientCounter < maxClient) {
+  console.log(clientCounter);
+  clientCounter += 1;
+}
