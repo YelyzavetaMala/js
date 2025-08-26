@@ -75,3 +75,23 @@ while (clientCounter < maxClient) {
   console.log(clientCounter);
   clientCounter += 1;
 }
+
+for (let i = 20; i >= 0; i -= 5) {
+  console.log(i);
+}
+
+function calculateTotal(number) {
+  let sum = 0;
+  for (let i = 1; i <= number; i++) {
+    sum += i;
+  }
+  return sum;
+}
+
+const fruts = ["apple", "peach", "pear", "banana"];
+fruts[0] = "peach";
+fruts[2] = "banana";
+
+const planets = ["Earth", "Mars", "Venus"];
+const lastElementIndex = planets.length - 1;
+console.log(planets[lastElementIndex]);
