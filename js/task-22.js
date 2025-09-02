@@ -95,3 +95,12 @@ fruts[2] = "banana";
 const planets = ["Earth", "Mars", "Venus"];
 const lastElementIndex = planets.length - 1;
 console.log(planets[lastElementIndex]);
+
+const planet = ["Earth", "Mars", "Venus", "Jupiter", "Saturn"];
+console.log(planet.slice(-2));
+
+const firstArray = ["Mercury", "Venus"];
+const secondArray = ["Mars", "Jupiter"];
+const results = firstArray.concat(secondArray);
+
+console.log(result);
