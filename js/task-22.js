@@ -104,3 +104,18 @@ const secondArray = ["Mars", "Jupiter"];
 const results = firstArray.concat(secondArray);
 
 console.log(result);
+
+const planets1 = ["Earth", "Mars", "Venus"];
+for (let i = 0; i < planets1.length; i += 1) {
+  console.log(planets1[i]);
+}
+
+function calculateTotalPrice(order) {
+  let total = 0;
+
+  for (const price of order) {
+    total += price;
+  }
+
+  return total;
+}
