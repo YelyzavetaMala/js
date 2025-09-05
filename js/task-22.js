@@ -119,3 +119,18 @@ function calculateTotalPrice(order) {
 
   return total;
 }
+
+function foo() {
+  const args = Array.from(arguments);
+  return args.join("-");
+}
+foo(1, 2, 3); // Поверне "1-2-3"
+
+function calculateTax(amount, taxRate = 0.2) {
+  return amount * taxRate;
+}
+
+const multiply2 = function (x, y, z) {
+  console.log(x * y * z);
+};
+multiply2(4, 5, 2);
