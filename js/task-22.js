@@ -134,3 +134,13 @@ const multiply2 = function (x, y, z) {
   console.log(x * y * z);
 };
 multiply2(4, 5, 2);
+
+// Працює виклик перед оголошенням
+multiply(1, 2, 3);
+
+function multiply(x, y, z) {
+  console.log(x * y * z);
+}
+
+// Працює виклик після оголошення
+multiply(4, 5, 6);
