@@ -144,3 +144,58 @@ function multiply(x, y, z) {
 
 // Працює виклик після оголошення
 multiply(4, 5, 6);
+
+const apartment = {
+  imgUrl: "https://via.placeholder.com/640x480",
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+  tags: ["premium", "promoted", "top"],
+};
+
+const aptRating = apartment.rating;
+const aptDescr = apartment.descr;
+const aptPrice = apartment.price;
+const aptTags = apartment.tags;
+
+const firstHobby = user.hobbies[0];
+console.log(firstHobby); // "swimming"
+
+const apartment1 = {
+  imgUrl: "https://via.placeholder.com/640x480",
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+  tags: ["premium", "promoted", "top"],
+};
+
+const aptRating1 = apartment["rating"];
+const aptDescr1 = apartment["descr"];
+const aptPrice1 = apartment["price"];
+const aptTags1 = apartment["tags"];
+
+const apartment2 = {
+  imgUrl: "https://via.placeholder.com/640x480",
+  descr: "Spacious apartment in the city center",
+  rating: 4,
+  price: 2153,
+  tags: ["premium", "promoted", "top"],
+  owner: {
+    name: "Henry",
+    phone: "982-126-1588",
+    email: "henry.carter@aptmail.com",
+  },
+};
+
+apartment2.price = 5000;
+apartment2.rating = 4.7;
+apartment2.owner.name = "Henry Sibola";
+apartment2.tags.push("trusted");
+
+const emailInputName = "email";
+const passwordInputName = "password";
+
+const credentials = {
+  [emailInputName]: "henry.carter@aptmail.com",
+  [passwordInputName]: "jqueryismyjam",
+};
