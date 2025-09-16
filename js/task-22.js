@@ -233,3 +233,62 @@ for (const color of colors) {
   hexColors.push(color.hex);
   rgbColors.push(color.rgb);
 }
+
+const obj = {
+  method(value) {
+    console.log(`I'm a method with ${value}!`);
+  },
+};
+
+obj.method(5); // "I'm a method with 5!"
+obj.method(10); // "I'm a method with 10!"
+
+const bookShelf = {
+  books: ["The Last Kingdom", "Dream Guardian"],
+  // Це метод об'єкта
+  getBooks() {
+    return "Returning all books";
+  },
+  // Це метод об'єкта
+  addBook(bookName) {
+    return `Adding book ${bookName}`;
+  },
+};
+
+// Виклики методів
+bookShelf.getBooks(); // поверне "Returning all books"
+bookShelf.addBook("New book 1"); // поверне "Adding book New book 1"
+bookShelf.addBook("New book 2"); // поверне "Adding book New book 2"
+
+const bookShelf1 = {
+  books: ["The Last Kingdom", "The Mist"],
+  getBooks() {
+    return this.books;
+  },
+};
+
+console.log(bookShelf1.getBooks()); // ["The Last Kingdom", "The Mist"]
+
+const bookShelf2 = {
+  books: ["The Last Kingdom"],
+};
+
+bookShelf2.books.push("The Mist");
+console.log(bookShelf2.books); // ["The Last Kingdom", "The Mist"]
+
+const atTheOldToad = {
+  potions: [
+    { name: "Speed potion", price: 460 },
+    { name: "Stone skin", price: 520 },
+  ],
+  getPotions() {
+    return this.potions;
+  },
+  updatePotionName(oldName, newName) {
+    for (const potion of this.potions) {
+      if (potion.name === oldName) {
+        potion.name = newName;
+      }
+    }
+  },
+};
