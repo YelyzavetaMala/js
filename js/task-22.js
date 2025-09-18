@@ -292,3 +292,15 @@ const atTheOldToad = {
     }
   },
 };
+
+const temps = [14, -4, 25, 8, 11];
+console.log(...temps); // 14 -4 25 8 11  набір окремих чисел
+// ✅ Передамо колекцію елементів у якості окремих аргументів
+console.log(Math.max(...temps)); // 25
+
+function getExtremeScores(scores) {
+  return {
+    best: Math.max(...scores),
+    worst: Math.min(...scores),
+  };
+}
